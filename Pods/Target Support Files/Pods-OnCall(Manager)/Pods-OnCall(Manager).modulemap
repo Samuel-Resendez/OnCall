@@ -1,0 +1,6 @@
+framework module Pods_OnCall_Manager_ {
+  umbrella header "Pods-OnCall(Manager)-umbrella.h"
+
+  export *
+  module * { export * }
+}
