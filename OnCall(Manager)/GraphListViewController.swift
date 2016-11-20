@@ -13,7 +13,7 @@ class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     var vesselName = ""
     
-    let fakeGraphList = ["Container Size Type", "Shipment Type", "Cargo Destinations"]
+    let fakeGraphList = ["Container Size Type", "Shipment Type", "Cargo Destinations","Current Chassis Supply"]
     @IBOutlet weak var graphTableView: UITableView!
 
     override func viewDidLoad() {

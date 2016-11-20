@@ -48,7 +48,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bU-xU-5aK">
                                 <rect key="frame" x="237.5" y="597" width="293" height="130"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="100"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -59,8 +59,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dolphin_Logo?" translatesAutoresizingMaskIntoConstraints="NO" id="kaN-GO-9zp">
                                 <rect key="frame" x="259" y="-23" width="250" height="250"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Deleur Apps Incoporated. Patent Pending. All Rights Reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpg-sG-0Pz">
-                                <rect key="frame" x="179" y="971" width="478" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BlackFin Incoporated. Patent Pending. All Rights Reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpg-sG-0Pz">
+                                <rect key="frame" x="179" y="971" width="448" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.46735235091743121" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -87,6 +87,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordField" destination="4vu-LR-tQH" id="p0N-jT-XRj"/>
+                        <outlet property="usernameField" destination="gHw-le-XEc" id="qES-bJ-ke9"/>
                         <segue destination="FFZ-GU-K2s" kind="presentation" identifier="logintoshipID" modalTransitionStyle="crossDissolve" id="j5T-Fq-wXg"/>
                     </connections>
                 </viewController>
@@ -107,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOO-lS-PMm">
-                                <rect key="frame" x="142.5" y="637" width="483" height="130"/>
+                                <rect key="frame" x="142.5" y="597" width="483" height="130"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
                                 <state key="normal" title="Get Metrics">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,7 +168,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="MSx-uD-wCa" secondAttribute="trailing" constant="100" id="6Pk-0O-AW1"/>
                             <constraint firstItem="mzf-W7-x9J" firstAttribute="leading" secondItem="meb-TQ-ebK" secondAttribute="leadingMargin" constant="6" id="8uU-ir-evm"/>
                             <constraint firstItem="TSl-QC-j7W" firstAttribute="centerX" secondItem="meb-TQ-ebK" secondAttribute="centerX" id="CJP-vx-DBE"/>
-                            <constraint firstItem="yOO-lS-PMm" firstAttribute="top" secondItem="MSx-uD-wCa" secondAttribute="bottom" constant="100" id="EBU-uw-B3x"/>
+                            <constraint firstItem="yOO-lS-PMm" firstAttribute="top" secondItem="MSx-uD-wCa" secondAttribute="bottom" constant="60" id="EBU-uw-B3x"/>
                             <constraint firstItem="MSx-uD-wCa" firstAttribute="centerY" secondItem="meb-TQ-ebK" secondAttribute="centerY" id="H2a-DT-AVR"/>
                             <constraint firstItem="TS0-zF-IBZ" firstAttribute="top" secondItem="dQ7-ed-z0A" secondAttribute="bottom" constant="30" id="JlP-Ew-PjG"/>
                             <constraint firstItem="MSx-uD-wCa" firstAttribute="top" secondItem="wC4-7Z-U3P" secondAttribute="bottom" constant="8" id="KqX-4a-QVg"/>
@@ -245,7 +247,7 @@
                                 <rect key="frame" x="259" y="-23.5" width="250" height="250"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iox-SU-Viq">
-                                <rect key="frame" x="14" y="28" width="106" height="71"/>
+                                <rect key="frame" x="26" y="28" width="106" height="71"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -258,6 +260,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RJJ-aX-6mJ" firstAttribute="top" secondItem="xsS-V5-F1W" secondAttribute="bottom" constant="30" id="77g-kU-bAL"/>
+                            <constraint firstItem="iox-SU-Viq" firstAttribute="leading" secondItem="kkl-HP-3Vn" secondAttribute="leadingMargin" constant="6" id="7sf-Qf-nq0"/>
                             <constraint firstItem="iox-SU-Viq" firstAttribute="top" secondItem="8uU-W2-256" secondAttribute="bottom" constant="8" id="ANZ-qk-lCv"/>
                             <constraint firstItem="xsS-V5-F1W" firstAttribute="leading" secondItem="kkl-HP-3Vn" secondAttribute="leadingMargin" constant="10" id="CKd-4Q-wte"/>
                             <constraint firstItem="RJJ-aX-6mJ" firstAttribute="centerX" secondItem="kkl-HP-3Vn" secondAttribute="centerX" id="ail-vS-ZJO"/>
@@ -268,7 +271,6 @@
                             <constraint firstItem="tCU-F9-l67" firstAttribute="top" secondItem="RJJ-aX-6mJ" secondAttribute="bottom" constant="78" id="s2J-bN-uXi"/>
                             <constraint firstItem="xsS-V5-F1W" firstAttribute="centerY" secondItem="kkl-HP-3Vn" secondAttribute="centerY" id="sLa-eq-pTb"/>
                             <constraint firstItem="gcL-hM-GhM" firstAttribute="centerX" secondItem="kkl-HP-3Vn" secondAttribute="centerX" id="uQz-F3-AJv"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="iox-SU-Viq" secondAttribute="leading" constant="6" id="xe0-eh-lKt"/>
                             <constraint firstItem="xsS-V5-F1W" firstAttribute="top" secondItem="gcL-hM-GhM" secondAttribute="bottom" constant="20" id="y1b-Bh-Izo"/>
                         </constraints>
                     </view>
@@ -344,7 +346,7 @@
         <image name="Dolphin_Logo?" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EoI-Pa-9zC"/>
+        <segue reference="j5T-Fq-wXg"/>
         <segue reference="F1N-or-MaP"/>
     </inferredMetricsTieBreakers>
 </document>

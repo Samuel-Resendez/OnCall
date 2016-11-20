@@ -26,6 +26,7 @@ class GraphViewController: UIViewController,IAxisValueFormatter {
     override func viewDidLoad() {
         super.viewDidLoad()
         barChartView.chartDescription?.text = ""
+        barChartView.drawBarShadowEnabled = false
         barChartView.xAxis.drawAxisLineEnabled = false
         barChartView.xAxis.drawGridLinesEnabled = false
         barChartView.leftAxis.drawGridLinesEnabled = false
@@ -45,7 +46,8 @@ class GraphViewController: UIViewController,IAxisValueFormatter {
         }
         let bSet = BarChartDataSet(values: entryList, label: "Frequency")
         //bSet.colors = [UIColor.red,UIColor.blue]
-        bSet.setColor(UIColor.orange, alpha: 0.7)
+        bSet.setColor(UIColor.blue, alpha: 0.5)
+        bSet.valueFont = UIFont(name: "HelveticaNeue-Thin", size: 30)!
         print("This is the titleString: " + titleString)
         if(titleString == "Container Size Type") {
             xLabels = ["20","40","45"]
@@ -53,6 +55,7 @@ class GraphViewController: UIViewController,IAxisValueFormatter {
         }
         barChartView.xAxis.labelCount = xVals.count
         barChartView.xAxis.valueFormatter = self
+        barChartView.xAxis.labelFont = UIFont(name: "HelveticaNeue-Thin", size: 20)!
         barChartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
         
         let bData = BarChartData(dataSets: [bSet])
