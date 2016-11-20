@@ -13,6 +13,14 @@ import Toast_Swift
 
 class DataHandler: NSObject {
     
+    
+    class func sendText() {
+        Alamofire.request("https://oncall-twilio.herokuapp.com/sms").responseJSON { response in
+            print(response.response)
+        }
+        
+    }
+    
     class func makeGetRequest() {
         Alamofire.request("http://oncallbackend.herokuapp.com/vessel",method:.get).responseJSON { response in
             

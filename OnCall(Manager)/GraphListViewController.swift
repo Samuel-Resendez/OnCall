@@ -38,6 +38,7 @@ class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewD
         let cell:UITableViewCell = self.graphTableView.dequeueReusableCell(withIdentifier: "graphCell")! as UITableViewCell
         cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 40)
         cell.textLabel?.text = fakeGraphList[indexPath.row];
+        cell.accessoryType = UITableViewCellAccessoryType.detailDisclosureButton
         
         return cell
     }
@@ -69,6 +70,7 @@ class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
 
     @IBAction func commissionPressed(_ sender: Any) {
+        DataHandler.sendText()
         let params = ["vessel":vesselName]
         print("VesselName: " + vesselName)
         let didSucceed = DataHandler.makeCommission(params: params, toastView:self.view)

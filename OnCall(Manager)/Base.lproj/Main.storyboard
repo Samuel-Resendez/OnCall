@@ -149,11 +149,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzf-W7-x9J">
+                                <rect key="frame" x="26" y="28" width="115" height="62"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="1ob-We-wNK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TS0-zF-IBZ" firstAttribute="leading" secondItem="meb-TQ-ebK" secondAttribute="leadingMargin" constant="100" id="5rm-co-ZYV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MSx-uD-wCa" secondAttribute="trailing" constant="100" id="6Pk-0O-AW1"/>
+                            <constraint firstItem="mzf-W7-x9J" firstAttribute="leading" secondItem="meb-TQ-ebK" secondAttribute="leadingMargin" constant="6" id="8uU-ir-evm"/>
                             <constraint firstItem="TSl-QC-j7W" firstAttribute="centerX" secondItem="meb-TQ-ebK" secondAttribute="centerX" id="CJP-vx-DBE"/>
                             <constraint firstItem="yOO-lS-PMm" firstAttribute="top" secondItem="MSx-uD-wCa" secondAttribute="bottom" constant="100" id="EBU-uw-B3x"/>
                             <constraint firstItem="MSx-uD-wCa" firstAttribute="centerY" secondItem="meb-TQ-ebK" secondAttribute="centerY" id="H2a-DT-AVR"/>
@@ -161,6 +172,7 @@
                             <constraint firstItem="MSx-uD-wCa" firstAttribute="top" secondItem="wC4-7Z-U3P" secondAttribute="bottom" constant="8" id="KqX-4a-QVg"/>
                             <constraint firstItem="wC4-7Z-U3P" firstAttribute="top" secondItem="TS0-zF-IBZ" secondAttribute="bottom" constant="18" id="OUu-Ih-Vb0"/>
                             <constraint firstItem="TS0-zF-IBZ" firstAttribute="centerX" secondItem="meb-TQ-ebK" secondAttribute="centerX" id="PQb-5Q-Z5a"/>
+                            <constraint firstItem="mzf-W7-x9J" firstAttribute="top" secondItem="4y8-z2-WME" secondAttribute="bottom" constant="8" id="YdR-sc-7FY"/>
                             <constraint firstItem="MSx-uD-wCa" firstAttribute="leading" secondItem="meb-TQ-ebK" secondAttribute="leadingMargin" constant="100" id="b01-7U-Vt5"/>
                             <constraint firstItem="MSx-uD-wCa" firstAttribute="top" secondItem="TS0-zF-IBZ" secondAttribute="bottom" constant="47" id="bYX-Mr-aDI"/>
                             <constraint firstItem="dQ7-ed-z0A" firstAttribute="centerX" secondItem="meb-TQ-ebK" secondAttribute="centerX" id="dFO-O1-ea3"/>
@@ -203,7 +215,7 @@
                                         <rect key="frame" x="0.0" y="28" width="708" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XaT-AJ-kzN" id="WNJ-tO-MDh">
-                                            <rect key="frame" x="0.0" y="0.0" width="708" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="708" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -229,8 +241,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dolphin_Logo?" translatesAutoresizingMaskIntoConstraints="NO" id="Nnd-KO-y7u">
+                                <rect key="frame" x="259" y="-23.5" width="250" height="250"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iox-SU-Viq">
-                                <rect key="frame" x="20" y="28" width="106" height="71"/>
+                                <rect key="frame" x="14" y="28" width="106" height="71"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -239,24 +254,21 @@
                                     <segue destination="FFZ-GU-K2s" kind="presentation" modalTransitionStyle="crossDissolve" id="EoI-Pa-9zC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dolphin_Logo?" translatesAutoresizingMaskIntoConstraints="NO" id="Nnd-KO-y7u">
-                                <rect key="frame" x="259" y="10" width="250" height="250"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RJJ-aX-6mJ" firstAttribute="top" secondItem="xsS-V5-F1W" secondAttribute="bottom" constant="30" id="77g-kU-bAL"/>
                             <constraint firstItem="iox-SU-Viq" firstAttribute="top" secondItem="8uU-W2-256" secondAttribute="bottom" constant="8" id="ANZ-qk-lCv"/>
                             <constraint firstItem="xsS-V5-F1W" firstAttribute="leading" secondItem="kkl-HP-3Vn" secondAttribute="leadingMargin" constant="10" id="CKd-4Q-wte"/>
-                            <constraint firstItem="Nnd-KO-y7u" firstAttribute="top" secondItem="8uU-W2-256" secondAttribute="bottom" constant="-10" id="KNp-Pn-oo7"/>
                             <constraint firstItem="RJJ-aX-6mJ" firstAttribute="centerX" secondItem="kkl-HP-3Vn" secondAttribute="centerX" id="ail-vS-ZJO"/>
                             <constraint firstItem="Nnd-KO-y7u" firstAttribute="centerX" secondItem="kkl-HP-3Vn" secondAttribute="centerX" id="blp-Lb-XKv"/>
+                            <constraint firstItem="gcL-hM-GhM" firstAttribute="top" secondItem="Nnd-KO-y7u" secondAttribute="bottom" constant="48" id="hEZ-yv-96Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xsS-V5-F1W" secondAttribute="trailing" constant="10" id="ldp-fY-yrw"/>
                             <constraint firstItem="xsS-V5-F1W" firstAttribute="centerX" secondItem="kkl-HP-3Vn" secondAttribute="centerX" id="n96-tF-Dop"/>
                             <constraint firstItem="tCU-F9-l67" firstAttribute="top" secondItem="RJJ-aX-6mJ" secondAttribute="bottom" constant="78" id="s2J-bN-uXi"/>
                             <constraint firstItem="xsS-V5-F1W" firstAttribute="centerY" secondItem="kkl-HP-3Vn" secondAttribute="centerY" id="sLa-eq-pTb"/>
                             <constraint firstItem="gcL-hM-GhM" firstAttribute="centerX" secondItem="kkl-HP-3Vn" secondAttribute="centerX" id="uQz-F3-AJv"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="iox-SU-Viq" secondAttribute="leading" id="xe0-eh-lKt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="iox-SU-Viq" secondAttribute="leading" constant="6" id="xe0-eh-lKt"/>
                             <constraint firstItem="xsS-V5-F1W" firstAttribute="top" secondItem="gcL-hM-GhM" secondAttribute="bottom" constant="20" id="y1b-Bh-Izo"/>
                         </constraints>
                     </view>
