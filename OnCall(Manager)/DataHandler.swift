@@ -36,7 +36,9 @@ class DataHandler: NSObject {
         var didSucceed = false
         
         Alamofire.request("http://oncallbackend.herokuapp.com/jobGen",method:.post, parameters:params).validate().responseJSON { response in
-            print(response.response)
+            
+            
+            print("Here is the result " + String(describing: response.result))
             print("------------")
             print(response.result.value)
             print("------------")

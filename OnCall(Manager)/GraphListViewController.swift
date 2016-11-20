@@ -38,7 +38,6 @@ class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewD
         let cell:UITableViewCell = self.graphTableView.dequeueReusableCell(withIdentifier: "graphCell")! as UITableViewCell
         cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 40)
         cell.textLabel?.text = fakeGraphList[indexPath.row];
-        cell.accessoryType = UITableViewCellAccessoryType.detailDisclosureButton
         
         return cell
     }
@@ -74,14 +73,15 @@ class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewD
         let params = ["vessel":vesselName]
         print("VesselName: " + vesselName)
         let didSucceed = DataHandler.makeCommission(params: params, toastView:self.view)
-    
-        if(didSucceed) {
-            print("We did it squad!")
-        }
-        else {
-            print("We didn't do it squad")
+        self.view.makeToast(vesselName + " commission Sent!            ", duration: 2.0, position: CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2), title: "BlackFin Notification", image: UIImage(named: "Dolphin_Logo?"), style:nil) { (didTap: Bool) -> Void in
+            if didTap {
+                print("completion from tap")
+            } else {
+                print("completion without tap")
+            }
         }
     }
+}
     /*
     // MARK: - Navigation
 
@@ -91,5 +91,3 @@ class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewD
         // Pass the selected object to the new view controller.
     }
     */
-
-}

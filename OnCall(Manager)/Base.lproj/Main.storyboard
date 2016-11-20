@@ -251,7 +251,7 @@
                                     <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FFZ-GU-K2s" kind="presentation" modalTransitionStyle="crossDissolve" id="EoI-Pa-9zC"/>
+                                    <segue destination="FFZ-GU-K2s" kind="presentation" identifier="backToShipID" modalTransitionStyle="crossDissolve" id="EoI-Pa-9zC"/>
                                 </connections>
                             </button>
                         </subviews>
