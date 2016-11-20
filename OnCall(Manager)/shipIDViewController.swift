@@ -9,6 +9,8 @@
 import UIKit
 
 class shipIDViewController: UIViewController {
+    
+    @IBOutlet weak var vesselNameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,12 @@ class shipIDViewController: UIViewController {
     */
     @IBAction func submitPressed(_ sender: Any) {
         performSegue(withIdentifier: "shipIDtoList", sender: sender);
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? GraphListViewController {
+            dest.vesselName = vesselNameTextField.text!
+        }
     }
 
 }

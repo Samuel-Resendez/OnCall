@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Toast_Swift
 
-class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    let fakeGraphList = ["Container Size Type", "Chassis Graph", "Who knows what else"]
+    var vesselName = ""
+    
+    let fakeGraphList = ["Container Size Type", "Shipment Type", "Cargo Destinations"]
     @IBOutlet weak var graphTableView: UITableView!
 
     override func viewDidLoad() {
@@ -28,7 +31,6 @@ class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     // --- UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Alright we're here!")
         return fakeGraphList.count
     }
     
@@ -40,14 +42,44 @@ class GraphListViewController: UIViewController,UITableViewDelegate,UITableViewD
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: "listtoGraphSegue", sender: nil)
+        let cell = graphTableView.cellForRow(at: indexPath)
+        performSegue(withIdentifier: "listtoGraphSegue", sender: cell)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as? UITableViewCell
+        if let dest = segue.destination as? GraphViewController {
+            dest.titleString = (cell!.textLabel?.text)!
+            dest.vesselName = self.vesselName
+            let params = ["vessel":vesselName]
+            if(dest.titleString == "Container Size Type") {
+                DataHandler.makePostRequest(endpoint:"vessel", params: params)
+            }
+            else if(dest.titleString == "Cargo Destinations") {
+                DataHandler.makePostRequest(endpoint: "destinations", params: params)
+            }
+            else if(dest.titleString == "Shipment Type") {
+                DataHandler.makePostRequest(endpoint: "locality", params: params)
+            }
+            
+        }
+    }
 
+    @IBAction func commissionPressed(_ sender: Any) {
+        let params = ["vessel":vesselName]
+        print("VesselName: " + vesselName)
+        let didSucceed = DataHandler.makeCommission(params: params, toastView:self.view)
+    
+        if(didSucceed) {
+            print("We did it squad!")
+        }
+        else {
+            print("We didn't do it squad")
+        }
+    }
     /*
     // MARK: - Navigation
 
